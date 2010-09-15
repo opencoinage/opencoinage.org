@@ -1,0 +1,52 @@
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .css
+  AddCharset UTF-8 .js
+
+  # HTML
+  AddType    application/xhtml+xml .html
+  AddCharset UTF-8 .html
+
+  # Markdown
+  AddType    text/plain .md
+  AddCharset UTF-8 .md
+
+  # RSS 1.0
+  AddType    application/rss+xml .rss
+  AddCharset UTF-8 .rss
+
+  # Turtle
+  AddType    text/turtle .ttl
+  AddCharset UTF-8 .ttl
+
+  # Notation3
+  AddType    text/n3 .n3
+  AddCharset UTF-8 .n3
+
+  # N-Triples
+  AddType    text/plain .nt
+  AddCharset US-ASCII .nt
+
+  # RDF/XML
+  AddType    application/rdf+xml .rdf
+  AddCharset UTF-8 .rdf
+
+  # RDF/JSON
+  AddType    application/json .json
+  AddCharset UTF-8 .json
+
+  # TriX
+  AddType    application/trix .xml
+  AddCharset UTF-8 .xml
+</IfModule>
+
+<IfModule mod_dir.c>
+  # See http://httpd.apache.org/docs/2.2/mod/mod_dir.html
+  DirectorySlash off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^(.+)/$ http://opencoinage.org/$1 [L,R=301]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.html -s
+  RewriteRule .* %{DOCUMENT_ROOT}%{REQUEST_URI}\.html [L,T=application/xhtml+xml]
+</IfModule>
