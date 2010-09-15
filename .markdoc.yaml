@@ -2,6 +2,7 @@ wiki-name: OpenCoinage.org
 wiki-dir: .
 static-dir: .
 document-extensions: [.md]
+generate-listing: never
 markdown:
   extensions: [extra, codehilite, toc]
 google-analytics: UA-83574-18
