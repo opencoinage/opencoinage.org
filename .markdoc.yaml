@@ -5,4 +5,7 @@ document-extensions: [.md]
 generate-listing: never
 markdown:
   extensions: [extra, codehilite, toc]
+  extension-configs:
+    codehilite:
+      force_linenos: true
 google-analytics: UA-83574-18
