@@ -19,25 +19,25 @@
 
 oc:Currency a owl:Class, rdfs:Class ;
   rdfs:isDefinedBy   <> ;
-  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:subClassOf    foaf:Document, rdfs:Resource ;
   rdfs:label         "Currency" ;
   rdfs:comment       "A digital currency contract."@en .
 
 oc:Token a owl:Class, rdfs:Class ;
   rdfs:isDefinedBy   <> ;
-  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:subClassOf    foaf:Document, rdfs:Resource ;
   rdfs:label         "Token" ;
   rdfs:comment       "A digital currency token."@en .
 
 oc:Issuer a owl:Class, rdfs:Class ;
   rdfs:isDefinedBy   <> ;
-  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:subClassOf    foaf:Organization, rdfs:Resource ;
   rdfs:label         "Issuer" ;
   rdfs:comment       "A digital currency issuer."@en .
 
 oc:Exchanger a owl:Class, rdfs:Class ;
   rdfs:isDefinedBy   <> ;
-  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:subClassOf    foaf:Organization, rdfs:Resource ;
   rdfs:label         "Exchanger" ;
   rdfs:comment       "A digital currency exchanger."@en .
 
