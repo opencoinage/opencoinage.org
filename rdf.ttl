@@ -1,0 +1,42 @@
+@base          <http://opencoinage.org/rdf/> .
+@prefix oc:    <http://opencoinage.org/rdf/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+
+<> a owl:Ontology ;
+  rdfs:label         "OpenCoinage" ;
+  rdfs:comment       "OpenCoinage RDF vocabulary."@en ;
+  rdfs:seeAlso       <http://datagraph.org/bendiken/foaf> ;
+  foaf:maker         <http://ar.to/#self> ;
+  dc:creator         "OpenCoinage.org" ;
+  dc:created         "2010-09-12" ;
+  dc:modified        "2010-09-17" .
+
+oc:Currency a owl:Class, rdfs:Class ;
+  rdfs:isDefinedBy   <> ;
+  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:label         "Currency" ;
+  rdfs:comment       "A digital currency contract."@en .
+
+oc:Token a owl:Class, rdfs:Class ;
+  rdfs:isDefinedBy   <> ;
+  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:label         "Token" ;
+  rdfs:comment       "A digital currency token."@en .
+
+oc:Issuer a owl:Class, rdfs:Class ;
+  rdfs:isDefinedBy   <> ;
+  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:label         "Issuer" ;
+  rdfs:comment       "A digital currency issuer."@en .
+
+oc:Exchanger a owl:Class, rdfs:Class ;
+  rdfs:isDefinedBy   <> ;
+  rdfs:subClassOf    rdfs:Resource ;
+  rdfs:label         "Exchanger" ;
+  rdfs:comment       "A digital currency exchanger."@en .
