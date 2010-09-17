@@ -35,6 +35,10 @@ file 'rdf.nt' => 'rdf.ttl' do
   sh "rapper -i turtle -o ntriples rdf.ttl | sort > rdf.nt"
 end
 
+file 'rdf.nq' => 'rdf.nt' do
+  sh "cp rdf.nt rdf.nq"
+end
+
 file 'rdf.json' => 'rdf.ttl' do
   sh "rapper -i turtle -o json rdf.ttl | jsonpretty > rdf.json"
 end
@@ -60,5 +64,5 @@ file 'rdf.png' => 'rdf.dot' do
   sh "dot rdf.dot -Tpng -o rdf.png"
 end
 
-desc "Generates rdf.{n3,nt,json,rdf,xml,dot,png} from rdf.ttl."
-task :rdf => %w(rdf.n3 rdf.nt rdf.json rdf.rdf rdf.xml rdf.dot rdf.png)
+desc "Generates rdf.{n3,nt,nq,json,rdf,xml,dot,png} from rdf.ttl."
+task :rdf => %w(rdf.n3 rdf.nt rdf.nq rdf.json rdf.rdf rdf.xml rdf.dot rdf.png)

@@ -26,6 +26,10 @@
   AddType    text/plain .nt
   AddCharset US-ASCII .nt
 
+  # N-Quads
+  AddType    text/x-nquads .nq
+  AddCharset US-ASCII .nq
+
   # RDF/XML
   AddType    application/rdf+xml .rdf
   AddCharset UTF-8 .rdf
