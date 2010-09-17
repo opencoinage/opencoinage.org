@@ -2,4 +2,11 @@
 .gnupg
 .html
 .tmp
+rdf.dot
+rdf.json
+rdf.n3
+rdf.nt
+rdf.png
+rdf.rdf
+rdf.xml
 tmp
