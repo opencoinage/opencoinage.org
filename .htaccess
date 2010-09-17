@@ -46,7 +46,9 @@
 
 <IfModule mod_rewrite.c>
   RewriteEngine on
-  RewriteRule ^(.+)/$ http://opencoinage.org/$1 [L,R=301]
+  RewriteRule ^rdf/(.+)$ http://opencoinage.org/rdf/ [L,R=303]
+  RewriteRule ^rdf/$     http://opencoinage.org/rdf.ttl [L]
+  RewriteRule ^(.+)/$    http://opencoinage.org/$1 [L,R=301]
   RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.html -s
   RewriteRule .* %{DOCUMENT_ROOT}%{REQUEST_URI}\.html [L,T=application/xhtml+xml]
 </IfModule>
