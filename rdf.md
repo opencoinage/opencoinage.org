@@ -2,7 +2,7 @@ zResource Description Framework (RDF) Vocabulary
 ===============================================
 
 _This specification describes the OpenCoinage RDF vocabulary, version 0.1.0
-(September 17th, 2010)._
+(September 22nd, 2010)._
 
 Introduction
 ------------
@@ -92,6 +92,10 @@ TODO
 
 TODO
 
+### oc:identifier {#identifier}
+
+TODO
+
 ### oc:issuer {#issuer}
 
 The `oc:issuer` property is an instance of [`owl:ObjectProperty`][owl:ObjectProperty]
@@ -99,6 +103,10 @@ and is used to state who the issuer of a particular digital currency is.
 
 The [`rdfs:domain`][rdfs:domain] of `oc:issuer` is `oc:Currency`, and its
 [`rdfs:range`][rdfs:range] is `oc:Issuer`.
+
+### oc:signature {#signature}
+
+TODO
 
 Summary
 -------
@@ -108,20 +116,22 @@ vocabulary.
 
 ### Classes
 
-Class          | Sub-class of           | Comment
--------------- | ---------------------- | ---------------------------------
-`oc:Currency`  | `foaf:Document`        | A digital currency contract.
-`oc:Token`     | `foaf:Document`        | A digital currency token.
-`oc:Issuer`    | `foaf:Organization`    | A digital currency issuer.
-`oc:Exchanger` | `foaf:Organization`    | A digital currency exchanger.
+Class           | Sub-class of           | Comment
+--------------- | ---------------------- | ---------------------------------
+`oc:Currency`   | `foaf:Document`        | A digital currency contract.
+`oc:Token`      | `foaf:Document`        | A digital currency token.
+`oc:Issuer`     | `foaf:Organization`    | A digital currency issuer.
+`oc:Exchanger`  | `foaf:Organization`    | A digital currency exchanger.
 
 ### Properties
 
-Property       | Type                   | Comment
--------------- | ---------------------- | ---------------------------------
-`oc:amount`    | `owl:DatatypeProperty` | TODO
-`oc:expires`   | `owl:DatatypeProperty` | TODO
-`oc:issuer`    | `owl:ObjectProperty`   | The issuer of a digital currency.
+Property        | Type                   | Comment
+--------------- | ---------------------- | ---------------------------------
+`oc:amount`     | `owl:DatatypeProperty` | TODO
+`oc:expires`    | `owl:DatatypeProperty` | TODO
+`oc:identifier` | `owl:DatatypeProperty` | A cryptographic identifier.
+`oc:issuer`     | `owl:ObjectProperty`   | The issuer of a digital currency.
+`oc:signature`  | `owl:DatatypeProperty` | A cryptographic signature.
 
 Examples
 --------

@@ -47,3 +47,19 @@ oc:issuer a owl:ObjectProperty, rdf:Property ;
   rdfs:range         oc:Issuer ;
   rdfs:label         "issuer" ;
   rdfs:comment       "The issuer of a digital currency."@en .
+
+oc:identifier a owl:DatatypeProperty, rdf:Property ;
+  rdfs:isDefinedBy   <> ;
+  rdfs:subPropertyOf dc:identifier ;
+  rdfs:domain        oc:Token ;
+  rdfs:range         xsd:Integer ;
+  rdfs:label         "identifier" ;
+  rdfs:comment       "A cryptographic identifier."@en .
+
+oc:signature a owl:DatatypeProperty, rdf:Property ;
+  rdfs:isDefinedBy   <> ;
+  rdfs:subPropertyOf dc:identifier ;
+  rdfs:domain        oc:Token ;
+  rdfs:range         xsd:Integer ;
+  rdfs:label         "signature" ;
+  rdfs:comment       "A cryptographic signature."@en .
