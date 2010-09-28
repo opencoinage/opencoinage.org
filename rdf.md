@@ -2,7 +2,7 @@ zResource Description Framework (RDF) Vocabulary
 ===============================================
 
 _This specification describes the OpenCoinage RDF vocabulary, version 0.1.0
-(September 22nd, 2010)._
+(September 28th, 2010)._
 
 Introduction
 ------------
@@ -133,8 +133,29 @@ Property        | Type                   | Comment
 `oc:issuer`     | `owl:ObjectProperty`   | The issuer of a digital currency.
 `oc:signature`  | `owl:DatatypeProperty` | A cryptographic signature.
 
-Examples
---------
+Examples: Publishing
+--------------------
+
+### An issuer description
+
+    @prefix oc:   <http://opencoinage.org/rdf/> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    
+    <http://example.org/> a oc:Issuer ;
+      foaf:name "Monopoly Mint, Inc."@en .
+
+### A currency description
+
+    @prefix oc:   <http://opencoinage.org/rdf/> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    
+    <http://example.org/currencies/mmx> a oc:Currency ;
+      oc:issuer <http://example.org/> ;
+      foaf:name "Monopoly dollars"@en ;
+      foaf:name "dólares Monopoly"@es .
+
+Examples: Consuming
+-------------------
 
 ### SPARQL
 
