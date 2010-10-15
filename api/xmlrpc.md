@@ -1,8 +1,8 @@
-XML-RPC Application Programming Interface (API) {#top}
+XML-RPC Application Programming Interface (API)
 ===============================================
 
 This document describes and specifies an XML-RPC protocol for OpenCoinage
-operations.
+issuance operations.
 
 [TOC]
 
@@ -10,11 +10,26 @@ Overview
 --------
 
 [XML-RPC][] is a remote procedure call (RPC) protocol that uses [XML][] to
-encode method calls and [HTTP][] as the transport mechanism. To the extent
-that anything XML-based can be called lightweight and straightforward,
-XML-RPC is lightweight and straightforward. More importantly than that, it
-is ubiquitous: mature XML-RPC client libraries are available for every
-popular programming language.
+encode method calls and [HTTP][] or [XMPP][] as the transport mechanism. To
+the extent that anything XML-based can be called lightweight and
+straightforward, XML-RPC is lightweight and straightforward. More
+importantly than that, it is ubiquitous: mature XML-RPC client libraries are
+available for every popular programming language.
+
+Transports
+----------
+
+XML-RPC in and of itself is merely a method of encoding RPC requests and
+responses in XML. XML-RPC payloads can be transmitted over a variety of
+transports; at present, HTTP and XMPP are well-defined and in wide use.
+
+### HTTP
+
+[HTTP][] is the standard transport for XML-RPC payloads.
+
+### XMPP
+
+[XMPP][] can be used as the transport as defined in [XEP-0009][XMPP-RPC].
 
 Endpoint
 --------
@@ -24,8 +39,9 @@ TODO
 Authentication
 --------------
 
-Authentication is orthogonal to XML-RPC. Standard HTTP [basic][] or
-[digest][] authentication mechanisms may be used as needed.
+Authentication is orthogonal to XML-RPC. When using HTTP as the transport,
+standard HTTP [basic][] or [digest][] authentication mechanisms may be used
+as needed.
 
 [basic]:  http://en.wikipedia.org/wiki/Basic_access_authentication
 [digest]: http://en.wikipedia.org/wiki/Digest_access_authentication
@@ -35,7 +51,7 @@ Methods
 
 ### opencoinage.version {#version}
 
-TODO
+Returns the server's version number.
 
 #### Request {#version-request}
 
@@ -44,7 +60,7 @@ TODO
     User-Agent: Drupal
     Content-Type: text/xml; charset=UTF-8
     Content-Length: ...
-
+    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.version</methodName>
@@ -63,14 +79,14 @@ TODO
     <methodResponse>
       <params>
         <param>
-          <value>0.0.0</value>
+          <value><string>0.0.1</string></value>
         </param>
       </params>
     </methodResponse>
 
 ### opencoinage.verify {#verify}
 
-TODO
+Returns `true` if the given token is valid, and `false` otherwise.
 
 #### Request {#verify-request}
 
@@ -85,16 +101,34 @@ TODO
       <methodName>opencoinage.verify</methodName>
       <params>
         <param>
-          <value>...</value>
+          <value>
+            <string>fQHFukq179n50tC7q3LQqlY9SJn5m2WNoxdylekZJU5SfxNzWSRKA8H5jK054gUNnMTOSVWDwUGFc6ZnC0IdAF</string>
+          </value>
         </param>
       </params>
     </methodCall>
 
 #### Response {#verify-response}
 
+    HTTP/1.1 200 OK
+    Connection: close
+    Date: ...
+    Server: ...
+    Content-Type: text/xml; charset=UTF-8
+    Content-Length: ...
+    
+    <?xml version="1.0"?>
+    <methodResponse>
+      <params>
+        <param>
+          <value><boolean>1</boolean></value>
+        </param>
+      </params>
+    </methodResponse>
+
 ### opencoinage.describe {#describe}
 
-TODO
+Returns information about the given token.
 
 #### Request {#describe-request}
 
@@ -109,16 +143,67 @@ TODO
       <methodName>opencoinage.describe</methodName>
       <params>
         <param>
-          <value>...</value>
+          <value>
+            <string>fQHFukq179n50tC7q3LQqlY9SJn5m2WNoxdylekZJU5SfxNzWSRKA8H5jK054gUNnMTOSVWDwUGFc6ZnC0IdAF</string>
+          </value>
         </param>
       </params>
     </methodCall>
 
 #### Response {#describe-response}
 
+    HTTP/1.1 200 OK
+    Connection: close
+    Date: ...
+    Server: ...
+    Content-Type: text/xml; charset=UTF-8
+    Content-Length: ...
+    
+    <?xml version="1.0"?>
+    <methodResponse>
+      <params>
+        <param>
+          <value>
+            <struct>
+              <member>
+                <name>valid</name>
+                <value>
+                  <boolean>1</boolean>
+                </value>
+              </member>
+              <member>
+                <name>issuer</name>
+                <value>
+                  <string>http://example.org/</string>
+                </value>
+              </member>
+              <member>
+                <name>currency</name>
+                <value>
+                  <string>http://example.org/monopoly-dollar</string>
+                </value>
+              </member>
+              <member>
+                <name>amount</name>
+                <value>
+                  <string>0.25</string>
+                </value>
+              </member>
+              <member>
+                <name>expires</name>
+                <value>
+                  <dateTime.iso8601>2010-12-31T23:59:59Z</dateTime.iso8601>
+                </value>
+              </member>
+            </struct>
+          </value>
+        </param>
+      </params>
+    </methodResponse>
+
 ### opencoinage.reissue {#reissue}
 
-TODO
+Issues a new token equivalent to the given token.
 
 #### Request {#reissue-request}
 
@@ -127,22 +212,42 @@ TODO
     User-Agent: Drupal
     Content-Type: text/xml; charset=UTF-8
     Content-Length: ...
-
+    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.reissue</methodName>
       <params>
         <param>
-          <value>...</value>
+          <value>
+            <string>fQHFukq179n50tC7q3LQqlY9SJn5m2WNoxdylekZJU5SfxNzWSRKA8H5jK054gUNnMTOSVWDwUGFc6ZnC0IdAF</string>
+          </value>
         </param>
       </params>
     </methodCall>
 
 #### Response {#reissue-response}
 
+    HTTP/1.1 200 OK
+    Connection: close
+    Date: ...
+    Server: ...
+    Content-Type: text/xml; charset=UTF-8
+    Content-Length: ...
+    
+    <?xml version="1.0"?>
+    <methodResponse>
+      <params>
+        <param>
+          <value>
+            <string>n9ZF9jUBFLf6GITN4l0TPq8tT3Jxl9WSZ3drv3xNtCZQWVhuyrWonOK9gMhwChj8fYkmFQU7yXZ0KFmsA2fqsF</string>
+          </value>
+        </param>
+      </params>
+    </methodResponse>
+
 ### opencoinage.merge {#merge}
 
-TODO
+_Not yet specified._
 
 #### Request {#merge-request}
 
@@ -151,13 +256,20 @@ TODO
     User-Agent: Drupal
     Content-Type: text/xml; charset=UTF-8
     Content-Length: ...
-
+    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.merge</methodName>
       <params>
         <param>
-          <value>...</value>
+          <value>
+            <string>4eVsjWo1xuMSosOuhp6fG50b2cLbgzOo7biundzt8VKXrqZ03NAEJgXe3Yx4HOx7R9KdOsN04oKbDJKYdHfMHJ</string>
+          </value>
+        </param>
+        <param>
+          <value>
+            <string>itwByCDIgIxlCWwnMk1bYFzMSpRLFyz0ZgOj59eaCk3lZ0UxhdBMVwzFUwqgZ7OQuHomCE5SRPMtmQ5aAeaiTY</string>
+          </value>
         </param>
       </params>
     </methodCall>
@@ -166,7 +278,7 @@ TODO
 
 ### opencoinage.split {#split}
 
-TODO
+_Not yet specified._
 
 #### Request {#split-request}
 
@@ -175,7 +287,7 @@ TODO
     User-Agent: Drupal
     Content-Type: text/xml; charset=UTF-8
     Content-Length: ...
-
+    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.split</methodName>
@@ -198,12 +310,12 @@ TODO
 Error Codes
 -----------
 
-TODO
+The protocol defined here makes use of the [XML-RPC FCI][] fault codes.
 
 History
 -------
 
-* **2010/09/01** Initial draft of specification.
+* **2010/10/14** Initial draft of specification.
 
 License
 -------
