@@ -4,8 +4,6 @@ OpenCoinage: Open-Source Digital Cash
 [Frequently Asked Questions (FAQ)](/faq)
 ----------------------------------------
 
-Coming soon.
-
 [Software Development Kit (SDK)](/sdk)
 --------------------------------------
 
@@ -25,8 +23,6 @@ Coming soon.
 [Shopping Cart Interface (SCI)](/sci)
 -------------------------------------
 
-Coming soon.
-
 [Application Software](/apps)
 -----------------------------
 
@@ -38,8 +34,8 @@ Coming soon.
 
 * [OpenCoinage Wallet Database Format](/apps/wallet/database)
 
-Miscellaneous
--------------
+Miscellaneous Resources
+-----------------------
 
 * [Links](/links)
 * [Bibliography](/bibliography)
