@@ -1,4 +1,4 @@
-XML-RPC Application Programming Interface (API)
+XML-RPC Application Programming Interface (API) {#top}
 ===============================================
 
 This document describes and specifies an XML-RPC protocol for OpenCoinage
@@ -33,11 +33,11 @@ Authentication is orthogonal to XML-RPC. Standard HTTP [basic][] or
 Methods
 -------
 
-### opencoinage.version
+### opencoinage.version {#version}
 
 TODO
 
-#### Request
+#### Request {#version-request}
 
     POST /xmlrpc HTTP/1.1
     Host: localhost
@@ -50,7 +50,7 @@ TODO
       <methodName>opencoinage.version</methodName>
     </methodCall>
 
-#### Response
+#### Response {#version-response}
 
     HTTP/1.1 200 OK
     Connection: close
@@ -68,11 +68,11 @@ TODO
       </params>
     </methodResponse>
 
-### opencoinage.verify
+### opencoinage.verify {#verify}
 
 TODO
 
-#### Request
+#### Request {#verify-request}
 
     POST /xmlrpc HTTP/1.1
     Host: localhost
@@ -90,13 +90,13 @@ TODO
       </params>
     </methodCall>
 
-#### Response
+#### Response {#verify-response}
 
-### opencoinage.describe
+### opencoinage.describe {#describe}
 
 TODO
 
-#### Request
+#### Request {#describe-request}
 
     POST /xmlrpc HTTP/1.1
     Host: localhost
@@ -114,13 +114,13 @@ TODO
       </params>
     </methodCall>
 
-#### Response
+#### Response {#describe-response}
 
-### opencoinage.reissue
+### opencoinage.reissue {#reissue}
 
 TODO
 
-#### Request
+#### Request {#reissue-request}
 
     POST /xmlrpc HTTP/1.1
     Host: localhost
@@ -138,13 +138,13 @@ TODO
       </params>
     </methodCall>
 
-#### Response
+#### Response {#reissue-response}
 
-### opencoinage.merge
+### opencoinage.merge {#merge}
 
 TODO
 
-#### Request
+#### Request {#merge-request}
 
     POST /xmlrpc HTTP/1.1
     Host: localhost
@@ -162,13 +162,13 @@ TODO
       </params>
     </methodCall>
 
-#### Response
+#### Response {#merge-response}
 
-### opencoinage.split
+### opencoinage.split {#split}
 
 TODO
 
-#### Request
+#### Request {#split-request}
 
     POST /xmlrpc HTTP/1.1
     Host: localhost
@@ -186,7 +186,7 @@ TODO
       </params>
     </methodCall>
 
-#### Response
+#### Response {#split-response}
 
 Data Types
 ----------
