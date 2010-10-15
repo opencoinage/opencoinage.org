@@ -10,7 +10,6 @@ task :build do
   sh "markdoc build"
   sh "rm -rf .html/Rakefile .html/README.* .html/tmp"
   sh "find .html -name '*~' | xargs rm"
-  sh "rm -f .html/index.*" # FIXME
 end
 
 desc "Deletes all files from markdoc's .html and .tmp directories"
