@@ -27,11 +27,16 @@ Coming soon.
 
 Coming soon.
 
-[Applications](/apps)
----------------------
+[Application Software](/apps)
+-----------------------------
 
 * [OpenCoinage Wallet](/apps/wallet) for Mac OS X, Linux, and Windows
 * [OpenCoinage Wallet for Android](/apps/android)
+
+[Application Specifications](/apps)
+-----------------------------------
+
+* [OpenCoinage Wallet Database Format](/apps/wallet/database)
 
 Miscellaneous
 -------------
