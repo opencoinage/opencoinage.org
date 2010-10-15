@@ -1,4 +1,4 @@
 Application Programming Interface (API)
 =======================================
 
-TODO
+* [OpenCoinage XML-RPC API](/api/xmlrpc)
