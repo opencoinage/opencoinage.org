@@ -27,9 +27,50 @@ transports; at present, HTTP and XMPP are well-defined and in wide use.
 
 [HTTP][] is the standard transport for XML-RPC payloads.
 
+#### Request {#http-request}
+
+    POST /xmlrpc HTTP/1.1
+    Host: localhost
+    User-Agent: Drupal
+    Content-Type: text/xml; charset=UTF-8
+    Content-Length: ...
+    
+    <?xml version="1.0"?>
+    <methodCall>
+      <methodName>opencoinage.version</methodName>
+    </methodCall>
+
+#### Response {#http-response}
+
+    HTTP/1.1 200 OK
+    Connection: close
+    Date: ...
+    Server: ...
+    Content-Type: text/xml; charset=UTF-8
+    Content-Length: ...
+    
+    <?xml version="1.0"?>
+    <methodResponse>
+      <params>
+        <param>
+          <value>
+            <string>0.0.1</string>
+          </value>
+        </param>
+      </params>
+    </methodResponse>
+
 ### XMPP
 
 [XMPP][] can be used as the transport as defined in [XEP-0009][XMPP-RPC].
+
+#### Request {#xmpp-request}
+
+TODO
+
+#### Response {#xmpp-response}
+
+TODO
 
 Endpoint
 --------
@@ -55,12 +96,6 @@ Returns the server's version number.
 
 #### Request {#version-request}
 
-    POST /xmlrpc HTTP/1.1
-    Host: localhost
-    User-Agent: Drupal
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.version</methodName>
@@ -68,18 +103,13 @@ Returns the server's version number.
 
 #### Response {#version-response}
 
-    HTTP/1.1 200 OK
-    Connection: close
-    Date: ...
-    Server: ...
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodResponse>
       <params>
         <param>
-          <value><string>0.0.1</string></value>
+          <value>
+            <string>0.0.1</string>
+          </value>
         </param>
       </params>
     </methodResponse>
@@ -90,12 +120,6 @@ Returns `true` if the given token is valid, and `false` otherwise.
 
 #### Request {#verify-request}
 
-    POST /xmlrpc HTTP/1.1
-    Host: localhost
-    User-Agent: Drupal
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.verify</methodName>
@@ -110,18 +134,13 @@ Returns `true` if the given token is valid, and `false` otherwise.
 
 #### Response {#verify-response}
 
-    HTTP/1.1 200 OK
-    Connection: close
-    Date: ...
-    Server: ...
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodResponse>
       <params>
         <param>
-          <value><boolean>1</boolean></value>
+          <value>
+            <boolean>1</boolean>
+          </value>
         </param>
       </params>
     </methodResponse>
@@ -132,12 +151,6 @@ Returns information about the given token.
 
 #### Request {#describe-request}
 
-    POST /xmlrpc HTTP/1.1
-    Host: localhost
-    User-Agent: Drupal
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.describe</methodName>
@@ -152,13 +165,6 @@ Returns information about the given token.
 
 #### Response {#describe-response}
 
-    HTTP/1.1 200 OK
-    Connection: close
-    Date: ...
-    Server: ...
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodResponse>
       <params>
@@ -207,12 +213,6 @@ Issues a new token equivalent to the given token.
 
 #### Request {#reissue-request}
 
-    POST /xmlrpc HTTP/1.1
-    Host: localhost
-    User-Agent: Drupal
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.reissue</methodName>
@@ -227,13 +227,6 @@ Issues a new token equivalent to the given token.
 
 #### Response {#reissue-response}
 
-    HTTP/1.1 200 OK
-    Connection: close
-    Date: ...
-    Server: ...
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodResponse>
       <params>
@@ -251,12 +244,6 @@ _Not yet specified._
 
 #### Request {#merge-request}
 
-    POST /xmlrpc HTTP/1.1
-    Host: localhost
-    User-Agent: Drupal
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.merge</methodName>
@@ -276,18 +263,21 @@ _Not yet specified._
 
 #### Response {#merge-response}
 
+    <?xml version="1.0"?>
+    <methodResponse>
+      <params>
+        <param>
+          ...
+        </param>
+      </params>
+    </methodResponse>
+
 ### opencoinage.split {#split}
 
 _Not yet specified._
 
 #### Request {#split-request}
 
-    POST /xmlrpc HTTP/1.1
-    Host: localhost
-    User-Agent: Drupal
-    Content-Type: text/xml; charset=UTF-8
-    Content-Length: ...
-    
     <?xml version="1.0"?>
     <methodCall>
       <methodName>opencoinage.split</methodName>
@@ -299,6 +289,15 @@ _Not yet specified._
     </methodCall>
 
 #### Response {#split-response}
+
+    <?xml version="1.0"?>
+    <methodResponse>
+      <params>
+        <param>
+          ...
+        </param>
+      </params>
+    </methodResponse>
 
 Data Types
 ----------
