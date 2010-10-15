@@ -304,7 +304,9 @@ Data Types
 
 ### Tokens
 
-TODO
+Tokens are encoded as Base62 (**not** Base64) strings and passed to and from
+methods as `<string>` values. Refer to the [SDK](/sdk) documentation for
+further details regarding the Base62 encoding.
 
 Error Codes
 -----------
