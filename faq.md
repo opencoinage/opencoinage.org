@@ -2,12 +2,13 @@ Frequently Asked Questions (FAQ)
 ================================
 
 Here follow some frequently-asked questions, with answers. If you have a
-question not covered here, please write to the
-[mailing list](http://groups.google.com/group/opencoinage).
+question not covered here, please write to the [mailing list][].
+
+[mailing list]: http://groups.google.com/group/opencoinage
 
 [TOC]
 
-## Technical Questions
+## Technical Questions {#technical}
 
 ### Which cryptographic schemes does OpenCoinage support? {#crypto-schemes}
 
@@ -70,3 +71,51 @@ and 140 characters, respectively, in the aforementioned two mediums).
 
 [Yodelbank]: http://web.archive.org/web/20050901141955/http://yodelbank.com/certificates.html
 [eCache]:    https://ffij33ewbnoeqnup.onion.meshmx.com/readme.php
+
+## Developer Questions {#developer}
+
+### How can I get involved in developing OpenCoinage?
+
+First off, be sure to join the [mailing list][] to keep abreast of ongoing
+developments.
+
+Once you know what you want to work on, [fork][] the OpenCoinage code on
+[GitHub][]. Implement your contribution on a [topic branch][] (**not** on
+the _master_ branch), and when done, send us a [pull request][] to request
+that we review and merge your contribution.
+
+Note the following dos and don'ts for working on the code base:
+
+* Do your best to adhere to the existing coding conventions and idioms, so
+  that the developer reviewing and merging your code won't need to do
+  extra work to clean up your code, which could delay processing your
+  contribution.
+* Don't use hard tabs, and don't leave trailing whitespace on any line.
+* Do document every method you add using the appropriate inline annotations
+  for the particular programming language used ([YARD][] for Ruby,
+  [Javadoc][] for Java, etc).  Look at the existing code for examples.
+* Don't touch any `VERSION` or `AUTHORS` files. If you need to change them,
+  do so on a private branch only.
+* Do feel free to add yourself to the `CREDITS` file and the corresponding
+  list in the `README`. Alphabetical order (last name, first name) applies.
+
+Note also that in order for us to merge any non-trivial changes (as a rule
+of thumb, additions larger than about 15 lines of code) we will need an
+explicit [public domain dedication][PDD] on record from you. We need this in
+order to ensure that OpenCoinage remains completely free and unencumbered by
+any copyright claims or concerns. Prepare your public domain dedication [as
+instructed][PDD], and e-mail it to the mailing list with the subject
+_"Public domain dedication"_ so that it becomes a matter of public record.
+
+If you wish to contribute to OpenCoinage pseudonymously, that's perfectly
+fine with us; but we will still require a valid e-mail address to record
+your contributions with, and a public domain dedication on record as having
+been sent from that e-mail address.
+
+[GitHub]:       http://github.com/opencoinage
+[fork]:         http://help.github.com/forking/
+[topic branch]: http://github.com/dchelimsky/rspec/wiki/topic-branches
+[pull request]: http://help.github.com/pull-requests/
+[YARD]:         http://yardoc.org/
+[Javadoc]:      http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
+[PDD]:          http://unlicense.org/#unlicensing-contributions
