@@ -18,7 +18,23 @@ Classes
 Examples
 --------
 
-TODO
+    #!java
+    import java.math.BigInteger;
+    import org.opencoinage.*;
+
+### Encoding an integer into a Base62 string
+
+    #!java
+    import org.opencoinage.util.Base62;
+    
+    Base62.encode(BigInteger.valueOf(1234567890)); // "1LY7VK"
+
+### Decoding a Base62 string into an integer
+
+    #!java
+    import org.opencoinage.util.Base62;
+    
+    Base62.decode("1LY7VK");                       // 1234567890
 
 Dependencies
 ------------

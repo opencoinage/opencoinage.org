@@ -17,10 +17,23 @@ Classes
 Examples
 --------
 
+    #!ruby
+    require 'opencoinage'
+
 ### Obtaining the OpenCoinage SDK version
 
     #!ruby
-    OpenCoinage::VERSION.to_s  #=> "0.0.1"
+    OpenCoinage::VERSION.to_s               #=> "0.0.1"
+
+### Encoding an integer into a Base62 string
+
+    #!ruby
+    OpenCoinage::Base62.encode(1234567890)  #=> "1LY7VK"
+
+### Decoding a Base62 string into an integer
+
+    #!ruby
+    OpenCoinage::Base62.decode("1LY7VK")    #=> 1234567890
 
 Dependencies
 ------------
