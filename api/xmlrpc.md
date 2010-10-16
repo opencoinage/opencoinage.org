@@ -305,8 +305,8 @@ Data Types
 ### Tokens
 
 Tokens are encoded as Base62 (**not** Base64) strings and passed to and from
-methods as `<string>` values. Refer to the [SDK](/sdk) documentation for
-further details regarding the Base62 encoding.
+methods as `<string>` values. Refer to the [FAQ](/faq#token-base62) and the
+[SDK](/sdk) documentation for further details regarding the Base62 encoding.
 
 Error Codes
 -----------
