@@ -3,6 +3,20 @@ Frequently Asked Questions (FAQ)
 
 ## Technical Questions
 
+### Which types of digital cash does OpenCoinage support?
+
+OpenCoinage is designed to accommodate a variety of cryptographic schemes
+for digital cash. In the abstract, OpenCoinage tokens are simply two-tuples
+consisting of a token identifier and the issuer's cryptographic signature of
+the identifier. Both the token identifier and the signature are
+arbitrary-length integers and can thus accommodate any cryptographic key
+length and any cryptographic hash function. The OpenCoinage protocols are
+designed to support cryptographic schemes all the way from simple
+[HMACs][HMAC] to full [blinded][blind signature] Chaumian digital cash.
+
+[HMAC]:            http://en.wikipedia.org/wiki/HMAC
+[blind signature]: http://en.wikipedia.org/wiki/Blind_signature
+
 ### Why are tokens encoded using Base62 instead of Base64? {#token-base62}
 
 Base62 is similar to [Base64][] but drops the two non-alphanumeric
@@ -38,7 +52,7 @@ checking token worth and validity, helping ensure that at least one
 particular class of attempted fraud will not be encouraged with OpenCoinage
 tokens.
 
-In general, wallet software should be designed to abstract away and hide
+In general, wallet software should be designed to abstract and hide away
 low-level details like token strings from users, not to promote their
 (misleading) purported readability.
 
