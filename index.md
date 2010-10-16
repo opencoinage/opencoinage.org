@@ -8,6 +8,7 @@ OpenCoinage: Open-Source Digital Cash
 --------------------------------------
 
 * [OpenCoinage SDK for Ruby](/sdk/ruby)
+* [OpenCoinage SDK for Python](/sdk/python)
 * [OpenCoinage SDK for Java](/sdk/java)
 
 [Resource Description Framework (RDF) Vocabulary](/rdf)
