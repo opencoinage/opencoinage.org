@@ -1,16 +1,22 @@
 Frequently Asked Questions (FAQ)
 ================================
 
+Here follow some frequently-asked questions, with answers. If you have a
+question not covered here, please write to the
+[mailing list](http://groups.google.com/group/opencoinage).
+
+[TOC]
+
 ## Technical Questions
 
-### Which types of digital cash does OpenCoinage support?
+### Which cryptographic schemes does OpenCoinage support? {#crypto-schemes}
 
 OpenCoinage is designed to accommodate a variety of cryptographic schemes
 for digital cash. In the abstract, OpenCoinage tokens are simply two-tuples
 consisting of a token identifier and the issuer's cryptographic signature of
 the identifier. Both the token identifier and the signature are
-arbitrary-length integers and can thus accommodate any cryptographic key
-length and any cryptographic hash function. The OpenCoinage protocols are
+arbitrary-length integers and can thus accommodate any cryptographic
+algorithm, key length, and hash function. The OpenCoinage protocols are
 designed to support cryptographic schemes all the way from simple
 [HMACs][HMAC] to full [blinded][blind signature] Chaumian digital cash.
 
@@ -23,7 +29,7 @@ Base62 is similar to [Base64][] but drops the two non-alphanumeric
 characters, `+` and `/`, which are problematic in many contexts such as in
 filenames and URLs. Dropping these characters also improves token usability
 in many environments by enabling the autoselection of entire token strings
-when double-clicked, thus facilitating copy and paste operations.
+when double-clicked, thus facilitating copy-and-paste operations.
 
 [Base64]: http://en.wikipedia.org/wiki/Base64
 
