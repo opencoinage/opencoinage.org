@@ -8,6 +8,37 @@ question not covered here, please write to the [mailing list][].
 
 [TOC]
 
+## General Questions {#general}
+
+### What is OpenCoinage? {#what}
+
+**OpenCoinage** is an umbrella project for developing royalty-free,
+[open-source](#licensing) [digital cash][] standards and reference
+implementations:
+
+* [OpenCoinage RDF](/rdf) is an [RDF][] vocabulary for describing digital
+  currency issuance (so-called [Ricardian contracts][]) and the entities
+  related to it. The vocabulary is intended for use by digital cash issuers
+  and exchangers in providing standardized machine-readable metadata about
+  the products and services they offer, and by developers of client
+  applications (such as shopping cart interfaces and electronic wallets) in
+  consuming such metadata.
+* [OpenCoinage APIs](/api) are intended to specify communications
+  protocols for digital cash issuance and for peer-to-peer digital cash
+  payments and exchanges.
+* [OpenCoinage SDK](/sdk) is a software development kit, available for
+  multiple popular [programming languages](#programming-languages), for
+  interacting with digital cash issuers and for parsing and verifying
+  standardized digital cash tokens.
+* [OpenCoinage Apps](/apps) are reference implementations of white-label
+  digital cash e-wallet applications for various platforms including Mac OS
+  X, Linux, Windows, as well as for the [Android](/apps/android) mobile
+  operating system.
+
+[digital cash]:        #TODO
+[RDF]:                 http://en.wikipedia.org/wiki/Resource_Description_Framework
+[Ricardian contracts]: http://iang.org/papers/ricardian_contract.html
+
 ## Technical Questions {#technical}
 
 ### Which cryptographic schemes does OpenCoinage support? {#crypto-schemes}
