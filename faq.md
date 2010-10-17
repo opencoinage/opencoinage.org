@@ -72,6 +72,16 @@ and 140 characters, respectively, in the aforementioned two mediums).
 [Yodelbank]: http://web.archive.org/web/20050901141955/http://yodelbank.com/certificates.html
 [eCache]:    https://ffij33ewbnoeqnup.onion.meshmx.com/readme.php
 
+## Programming Questions {#programming}
+
+### Which programming languages does OpenCoinage support? {#programming-languages}
+
+The [OpenCoinage SDK](/sdk) is currently being targeted at five major
+programming languages: [Ruby](/sdk/ruby), [Python](/sdk/python),
+[PHP](/sdk/php), [Java](/sdk/java), and [JavaScript](/sdk/javascript).
+
+Ports to other programming languages [are welcomed](#contributing).
+
 ## Developer Questions {#developer}
 
 ### How do I submit bug reports and patches for OpenCoinage? {#bug-reports}
