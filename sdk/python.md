@@ -57,6 +57,18 @@ Uninstallation
     #!bash
     sudo pip uninstall opencoinage
 
+Download
+--------
+
+* [opencoinage-0.0.0.tar.bz2][tar.bz2]
+* [opencoinage-0.0.0.tar.gz][tar.gz]
+* [opencoinage-0.0.0.zip][zip]
+
+[PyPI]:    http://pypi.python.org/pypi/opencoinage
+[tar.bz2]: http://pypi.python.org/packages/source/o/opencoinage/opencoinage-0.0.0.tar.bz2
+[tar.gz]:  http://pypi.python.org/packages/source/o/opencoinage/opencoinage-0.0.0.tar.gz
+[zip]:     http://pypi.python.org/packages/source/o/opencoinage/opencoinage-0.0.0.zip
+
 Mailing List
 ------------
 
