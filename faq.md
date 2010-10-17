@@ -74,7 +74,21 @@ and 140 characters, respectively, in the aforementioned two mediums).
 
 ## Developer Questions {#developer}
 
-### How can I get involved in developing OpenCoinage?
+### How do I submit bug reports and patches for OpenCoinage? {#bug-reports}
+
+Submit any bug reports to our [issue tracker][] on [GitHub][]. If you have a
+patch that fixes a bug you ran into, you can either attach it to the issue,
+or you can fork the code base on GitHub ([see below](#contributing)) and
+send us a pull request. We prefer pull requests, but patch files are fine,
+too.
+
+If you have any questions related to a bug or other problem you're
+experiencing, just post to the [mailing list][] and we'll be happy to try
+and help you out.
+
+[issue tracker]: http://github.com/opencoinage/opencoinage/issues
+
+### How can I get involved in developing OpenCoinage? {#contributing}
 
 First off, be sure to join the [mailing list][] to keep abreast of ongoing
 developments.
