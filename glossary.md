@@ -4,6 +4,12 @@ Glossary
 AMQP
 :   Advanced Message Queuing Protocol.
 
+API
+:   Application Programming Interface.
+
+Base62
+:   TODO
+
 blinding
 :   A cryptographic technique by which an agent can provide a service to
     (i.e., compute a function for) a client in an encoded form without
@@ -28,6 +34,9 @@ DCE
 DGC
 :   Digital gold currency.
 
+HMAC
+:   Hash-based Message Authentication Code.
+
 HTML
 :   Hypertext Markup Language.
 
@@ -41,8 +50,14 @@ IETF
 ISO
 :   International Standards Organization.
 
+issuer
+:   TODO
+
 JSON
 :   JavaScript Object Notation.
+
+MAC
+:   Message Authentication Code.
 
 PKC
 :   Public-key cryptography.
@@ -69,8 +84,20 @@ RSA
 :   Rivest, Shamir and Adleman; the most-widely used public-key cryptography
     algorithm.
 
+Ricardian contract
+:   TODO
+
+SCI
+:   Shopping Cart Integration.
+
+SDK
+:   Software Development Kit.
+
 SPARQL
 :   SPARQL Protocol and RDF Query Language.
+
+TOS
+:   Terms of Service.
 
 URI
 :   Uniform Resource Identifier.
