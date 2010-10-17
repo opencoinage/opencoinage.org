@@ -67,6 +67,11 @@ Source Code
 
 <http://github.com/opencoinage/opencoinage>
 
+Authors
+-------
+
+* [Arto Bendiken](http://github.com/bendiken) - <http://ar.to/>
+
 License
 -------
 
