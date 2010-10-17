@@ -29,12 +29,16 @@ Examples
 ### Encoding an integer into a Base62 string
 
     #!python
-    TODO
+    from opencoinage.util import Base62
+    
+    Base62.encode(1234567890)               #=> "1LY7VK"
 
 ### Decoding a Base62 string into an integer
 
     #!python
-    TODO
+    from opencoinage.util import Base62
+    
+    Base62.decode("1LY7VK")                 #=> 1234567890
 
 Dependencies
 ------------
