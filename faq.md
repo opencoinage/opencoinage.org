@@ -39,6 +39,21 @@ implementations:
 [RDF]:                 http://en.wikipedia.org/wiki/Resource_Description_Framework
 [Ricardian contracts]: http://iang.org/papers/ricardian_contract.html
 
+### Where can I learn about the cryptography behind digital cash? {#learning}
+
+A good place to start would be [J. Orlin Grabbe][JOG]'s tutorial
+[Cryptography and Number Theory for Digital Cash][JOG cryptnum].
+See also [Bruce Schneier][Schneier]'s book [Applied Cryptography][AC],
+chapter 6, as well as the [Handbook of Applied Cryptography][HAC], page 487
+(available for free online).
+
+[JOG]:          http://en.wikipedia.org/wiki/James_Orlin_Grabbe
+[JOG cryptnum]: http://orlingrabbe.com/cryptnum.htm
+[JOG misc]:     http://orlingrabbe.com/view/articles/
+[Schneier]:     http://en.wikipedia.org/wiki/Bruce_Schneier
+[AC]:           http://www.schneier.com/book-applied.html
+[HAC]:          http://www.cacr.math.uwaterloo.ca/hac/
+
 ## Technical Questions {#technical}
 
 ### Which cryptographic schemes does OpenCoinage support? {#crypto-schemes}
