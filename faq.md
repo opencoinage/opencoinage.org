@@ -35,7 +35,7 @@ implementations:
   X, Linux, Windows, as well as for the [Android](/apps/android) mobile
   operating system.
 
-[digital cash]:        #TODO
+[digital cash]:        http://en.wikipedia.org/wiki/Digital_cash
 [RDF]:                 http://en.wikipedia.org/wiki/Resource_Description_Framework
 [Ricardian contracts]: http://iang.org/papers/ricardian_contract.html
 
@@ -126,6 +126,18 @@ project. You are naturally free to apply more restrictive licensing should
 you decide to host your library elsewhere.
 
 ## Developer Questions {#developer}
+
+### Where can I obtain the OpenCoinage SDK source code? {#source-code}
+
+All source code produced within the scope of the OpenCoinage project is
+hosted on [GitHub][]. The latest development version of the [SDK](/sdk) is
+available for download both as [a tarball][SDK downloads] and as a [Git][]
+[repository][SDK repository] that includes the full revision control
+history.
+
+[SDK downloads]:  http://github.com/opencoinage/opencoinage/downloads
+[SDK repository]: http://github.com/opencoinage/opencoinage
+[Git]:            http://git-scm.com/
 
 ### How do I submit bug reports and patches for OpenCoinage? {#bug-reports}
 
