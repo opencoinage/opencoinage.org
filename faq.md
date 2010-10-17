@@ -82,7 +82,7 @@ programming languages: [Ruby](/sdk/ruby), [Python](/sdk/python),
 
 Ports to other programming languages [are welcomed](#contributing).
 
-### How do I port the OpenCoinage SDK to another programming language? {#porting}
+### How can I port the OpenCoinage SDK to another programming language? {#porting}
 
 Porting the [SDK](/sdk) to a new programming language entails, at minimum,
 only writing a [Base62](#token-base62) encoder and an [XML-RPC](/api/xmlrpc)
@@ -155,3 +155,21 @@ been sent from that e-mail address.
 [YARD]:         http://yardoc.org/
 [Javadoc]:      http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
 [PDD]:          http://unlicense.org/#unlicensing-contributions
+
+## Licensing Questions {#licensing}
+
+### How is OpenCoinage licensed and are there restrictions on its usage? {#license}
+
+OpenCoinage is 100% [free and unencumbered][Unlicense dissected] [public
+domain][Unlicense] software, with absolutely no strings attached. All
+OpenCoinage developers have [explicitly waived][PDD] their copyright and
+dedicated their contributions to the public domain. No copyrighted code is
+accepted into the OpenCoinage code base.
+
+No restrictions whatsoever are imposed on what you may do with OpenCoinage.
+You are free to download, copy, use, modify, distribute, and sell the
+software as you wish, for any purpose, commercial or non-commercial.
+
+[Unlicense]:           http://unlicense.org/
+[Unlicense dissected]: http://ar.to/2010/01/dissecting-the-unlicense
+[PDD]:                 http://unlicense.org/#unlicensing-contributions
