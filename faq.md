@@ -187,7 +187,8 @@ Note the following dos and don'ts for working on the code base:
 * Don't use hard tabs, and don't leave trailing whitespace on any line.
 * Do document every method you add using the appropriate inline annotations
   for the particular programming language used ([YARD][] for Ruby,
-  [Javadoc][] for Java, etc).  Look at the existing code for examples.
+  [Epydoc][] for Python, [Javadoc][] for Java, etc). Look at the existing
+  code for examples.
 * Don't touch any `VERSION` or `AUTHORS` files. If you need to change them,
   do so on a private branch only.
 * Do feel free to add yourself to the `CREDITS` file and the corresponding
@@ -212,6 +213,7 @@ been sent from that e-mail address.
 [pull request]: http://help.github.com/pull-requests/
 [YARD]:         http://yardoc.org/
 [Javadoc]:      http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
+[Epydoc]:       http://epydoc.sourceforge.net/
 [PDD]:          http://unlicense.org/#unlicensing-contributions
 
 ## Licensing Questions {#licensing}
