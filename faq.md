@@ -131,14 +131,17 @@ Ports to other programming languages [are welcomed](#contributing).
 ### How can I port the OpenCoinage SDK to another programming language? {#porting}
 
 Porting the [SDK](/sdk) to a new programming language entails, at minimum,
-only writing a [Base62](#token-base62) encoder and an [XML-RPC](/api/xmlrpc)
-client.
+writing a [Base62](#token-base62) encoder, implementing the [PKCS#1][]
+`I2OSP` and `OS2IP` primitives, and developing a client for the OpenCoinage
+[XML-RPC API](/api/xmlrpc).
 
 Note that if you wish your port of the SDK to be hosted by the OpenCoinage
 project, it [must be](#contributing) released into the [public
 domain](#licensing) as is all software developed within the scope of the
 project. You are naturally free to apply more restrictive licensing should
 you decide to host your library elsewhere.
+
+[PKCS#1]: http://en.wikipedia.org/wiki/PKCS1
 
 ## Developer Questions {#developer}
 
