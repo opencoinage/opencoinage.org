@@ -10,6 +10,9 @@ Classes
 * [`OpenCoinage::Currency`][Currency]
 * [`OpenCoinage::Token`][Token]
 * [`OpenCoinage::Vocabulary`][Vocabulary]
+* `OpenCoinage::Util`
+  * `OpenCoinage::Util::Base62`
+  * `OpenCoinage::Util::PKCS1`
 * [`OpenCoinage::XMLRPC`][XMLRPC]
   * [`OpenCoinage::XMLRPC::Client`][XMLRPC::Client]
   * [`OpenCoinage::XMLRPC::Server`][XMLRPC::Server]
@@ -41,6 +44,7 @@ Dependencies
 * [Ruby][] (>= 1.8.7) or (>= 1.8.1 with [Backports][])
 * [Bitcache](http://rubygems.org/gems/bitcache) (>= 0.0.1)
 * [RDF.rb](http://rubygems.org/gems/rdf) (>= 0.2.3)
+* [RSA.rb](http://rubygems.org/gems/rsa) (>= 0.1.4)
 * [UUID](https://rubygems.org/gems/uuid) (>= 2.3.1)
 
 Installation
